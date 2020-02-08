@@ -1,6 +1,6 @@
 {
   "name": "create-vkiq-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Create VkiQ plugin within seconds.",
   "main": "index.js",
   "files": [
@@ -39,7 +39,7 @@
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "git-cz": "^3.2.1",
+    "git-cz": "^4.3.1",
     "prettier": "^1.18.2"
   },
   "config": {

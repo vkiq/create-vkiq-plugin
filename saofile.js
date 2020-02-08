@@ -26,6 +26,17 @@ module.exports = {
     {
       type: 'add',
       files: '**'
+    },
+    {
+      type: 'move',
+      patterns: {
+        gitignore: '.gitignore',
+        '_package.json': 'package.json',
+        '_.eslintrc.js': '.eslintrc.js',
+        '_.prettierrc.js': '.prettierrc.js',
+        '_index.d.ts': 'index.d.ts',
+        '_index.ts': 'index.ts'
+      }
     }
   ],
   async completed() {
