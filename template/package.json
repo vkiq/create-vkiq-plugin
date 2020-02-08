@@ -1,0 +1,47 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.0",
+  "description": "<%= description %>",
+  "author": "<%= author %>",
+  "devDependencies": {
+    "@types/node": "^13.7.0",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "git-cz": "^3.2.1",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.3.0",
+    "prettier": "^1.18.2",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "lint-staged": {
+    "*.{js,ts}": "eslint --ext .js,.ts --fix"
+  },
+  "keywords": [
+    "vkiq"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/git-cz"
+    }
+  },
+  "dependencies": {
+    "plugog": "^0.1.2",
+    "socket.io": "^2.3.0"
+  }
+}
