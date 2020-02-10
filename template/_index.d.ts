@@ -1,15 +1,15 @@
 // Type definitions for VkiQ.Plugin
 // Project: VkiQ
-// Definitions by: <%= author %>
+// Definitions by: Il Harper <afanyiyu@hotmail.com>
 
 // Note that ES6 modules cannot directly export class objects.
 // This file should be imported using the CommonJS-style:
-//   import x = require('<%= name %>');
+//   import x = require('vkiq-plugin-name');
 //
 // Alternatively, if --allowSyntheticDefaultImports or
 // --esModuleInterop is turned on, this file can also be
 // imported as a default import:
-//   import x from '<%= name %>';
+//   import x from 'vkiq-plugin-name';
 //
 // Refer to the TypeScript documentation at
 // https://www.typescriptlang.org/docs/handbook/modules.html#export--and-import--require
@@ -19,6 +19,7 @@
 @typescript-eslint/no-use-before-define,
 @typescript-eslint/no-explicit-any */
 
+import { EventEmitter } from 'events';
 import { WriteStream } from 'fs';
 
 declare class PluginLogger {
@@ -65,9 +66,10 @@ declare class PluginLogger {
 }
 
 declare class VkiQPluginOptions {
-  name: string;
   channel: string;
   log: PluginLogger;
+  debug: boolean;
+  dispatch: EventEmitter;
   [K: string]: any;
 }
 

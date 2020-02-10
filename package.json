@@ -1,6 +1,6 @@
 {
   "name": "create-vkiq-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Create VkiQ plugin within seconds.",
   "main": "index.js",
   "files": [
